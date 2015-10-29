@@ -1,4 +1,4 @@
-__shadowDB = new function() {
+localStorageCloud = new function() {
 
     var that = this;
     var returnee;
@@ -15,7 +15,7 @@ __shadowDB = new function() {
 
       $.ajax({
           type: 'POST',
-          url: __SHADOW_COMMAND + __SHADOW_GET_DB,
+          url: cloudUrlGet,
           data: postData,
           async: false,
           timeout: 2000,
@@ -40,7 +40,7 @@ __shadowDB = new function() {
 
       $.ajax({
           type: 'POST',
-          url: __SHADOW_COMMAND + __SHADOW_SET_DB,
+          url: cloudUrlSet,
           data: postData
         });
     };
